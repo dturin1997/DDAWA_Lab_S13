@@ -15,18 +15,25 @@ const CardPokemons = ({ pokemons }) => {
         {pokemons.length > 0 &&
           pokemons.map(({ pokemon }) => (
             <Grid item xs={12} sm={4}>
-              <Card>
+              <Card 
+                sx={{ backgroundColor: 'rgb(250, 194, 19)'  }}
+              >
                 <CardMedia
+                  sx={{ borderRadius: '50%', backgroundColor: 'rgb(255, 250, 215)' }}
                   component="img"
-                  width={200}
-                  height={300}
-                  image={`http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${
+                  width={300}
+                  height={250}
+                  image={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
                     pokemon.url.split("/")[6]
-                  }.svg`}
+                  }.png`}
                 />
                 <CardContent>
-                  <Typography variant="body1">{pokemon.name}</Typography>
-                  <Button>Ver detalle</Button>
+                  <Typography variant="body1"
+                  sx={{ color:'red', fontWeight: 'bold' }}>{pokemon.name}</Typography>
+                  
+                  <Button
+                    sx={{ color:'green', fontWeight: 'bold' }}
+                  >Ver detalle</Button>
                 </CardContent>
               </Card>
             </Grid>

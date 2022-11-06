@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import theme from "./theme";
-import { CardPokemons, DropDown } from "./components";
+import { CardPokemons, DropDown, Footer, Header } from "./components";
 import { ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/material";
 import { get } from "./services";
+import "./App.css"
 
 function App() {
   const [type, setType] = useState("https://pokeapi.co/api/v2/type/1/");
@@ -37,11 +38,16 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container>
+      <Header />
+      <Container
+        sx={{ display: 'flex', flexDirection: "column", backgroundColor: 'rgb(188, 226, 158)' }}
+      >
         <DropDown type={type} handleChange={handleChange} types={types} />
         <CardPokemons pokemons={pokemons} />
       </Container>
+      <Footer />
     </ThemeProvider>
+    
   );
 }
 
