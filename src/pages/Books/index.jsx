@@ -25,7 +25,7 @@ const Books = () => {
     const [search,setSearch] = useState("");
     const handleSearch = async () => {
         try{
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}?maxResults=30`);
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=30`);
             const data = await response.json()
             console.log(data)
         }catch{
