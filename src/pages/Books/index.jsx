@@ -77,7 +77,7 @@ const Books = () => {
                     
                 </Card>
             </Box>
-
+{/* 
             <Box>
                 <Grid container spacing={3} mt={3}>
                     {booksArray.length > 0 &&
@@ -107,7 +107,7 @@ const Books = () => {
                     ))}
                 </Grid>
             </Box>
-
+*/}
         </Container>
     );
 };
