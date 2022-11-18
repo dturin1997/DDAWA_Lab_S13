@@ -35,7 +35,7 @@ const Home = () => {
 
     return (
         <Container
-            sx={{ display: 'flex', flexDirection: "column", backgroundColor: 'rgb(188, 226, 158)' }}
+            sx={{ backgroundColor: 'rgb(188, 226, 158)' }}
         >
             <DropDown type={type} handleChange={handleChange} types={types} />
             <CardPokemons pokemons={pokemons} />
