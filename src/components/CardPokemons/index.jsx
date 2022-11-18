@@ -16,9 +16,10 @@ const CardPokemons = ({ pokemons }) => {
           pokemons.map(({ pokemon }) => (
             <Grid item xs={12} sm={4}>
               <Card 
-                sx={{ backgroundColor: 'rgb(250, 194, 19)'  }}
+                sx={{ backgroundColor: 'rgb(250, 194, 19)', padding: "25px"  }}
               >
                 <CardMedia
+                  class="card-media"
                   sx={{ borderRadius: '50%', backgroundColor: 'rgb(255, 250, 215)' }}
                   component="img"
                   width={300}
