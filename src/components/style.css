@@ -18,12 +18,26 @@
 .header {
     margin-left: 0px;
     background-color: rgb(21, 52, 98);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     /*
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
     background-color: rgb(21, 52, 98);
     */
+}
+.header div {
+    display: flex;
+    align-items: center;
+}
+.header div h1 {
+    color: white;
+}
+.header div img {
+    width: 80px;
+    margin: 10px;
 }
 .header nav {
     /*
@@ -80,7 +94,9 @@
     font-size: 28px;
     background-color: rgb(21, 52, 98);
     width: 100%;
+    
     margin-top: 0px;
+    
     margin-left: 0%;
     margin-right: 0%;
     padding-top: 10px;

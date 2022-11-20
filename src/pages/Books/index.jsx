@@ -1,6 +1,8 @@
 import { Card, CardMedia, Typography, CardContent, Container, Box, Button, TextField, Grid } from "@mui/material";
 import { useEffect, useState} from "react";
 import { searchBooks } from "../../services";
+import { BookItem } from "../../components";
+import { Header, Footer } from "../../components"
 
 const Books = () => {
     /*
@@ -24,7 +26,8 @@ const Books = () => {
     }, []);
     */
     const [ search, setSearch ] = useState("");
-    const [ booksArray, setBooksArray] = useState([])
+    //const [ booksArray, setBooksArray] = useState([]);
+    const [books, setBooks] = useState([]);
     /*
     const handleSearch = async () => {
         try{
@@ -39,13 +42,20 @@ const Books = () => {
     const handleSearch = async () => {
         const books = await searchBooks(search);
         console.log(books);
-        setBooksArray(books.items);
+        //setBooksArray(books.items);
+        setBooks(books.items);
 
     }
     return (
-        <Container maxWidth="md">
-            <Box my={4}>
-                <Card>
+        
+        <Container maxWidth="ml">
+            <Header />
+            <Box my={4}
+            >
+                <Card
+                sx={{
+                    backgroundColor: 'rgb(239, 245, 245)'
+                }}>
                     <CardContent>
                         <Box
                             sx={{
@@ -54,6 +64,7 @@ const Books = () => {
                                 gap: 3,
                                 alignItems: "center",
                                 justifyContent: "space-between"
+                                
                             }}
                         >
                             <TextField
@@ -108,6 +119,10 @@ const Books = () => {
                 </Grid>
             </Box>
 */}
+        {books.length > 0 &&
+            books.map((book, index) => <BookItem key={index} book={book} />)}
+
+        <Footer />
         </Container>
     );
 };

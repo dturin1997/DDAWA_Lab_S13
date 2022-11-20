@@ -2,6 +2,12 @@ import "../style.css"
 const Header = () => {
   return (
     <header className="header">
+      <div>
+        <img src="./libro-2.png" alt="" 
+        
+        />
+        <h1>Libros</h1>
+      </div>
       <nav>
         <ul>
           <li>
